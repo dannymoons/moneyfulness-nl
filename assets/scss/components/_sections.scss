@@ -1,0 +1,343 @@
+.section {
+  $section: &;
+  position: relative;
+
+  &__container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+
+    &--xs {
+      max-width: $content-width-xs;
+    }
+
+    &--sm {
+      max-width: $content-width-sm; // ANDERE BREEDTE?!
+    }
+  }
+
+  &__img {
+    // box-shadow: 0px 20px 40px -5px rgba(0, 0, 0, 0.5);
+    display: block;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    opacity: 0.7;
+  }
+
+  &__header {
+    margin-bottom: $column-gap-sm;
+  }
+
+  &__title {
+    color: #222;
+    font-size: 2rem;
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 4rem;
+    }
+  }
+
+  &__intro {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  &--primary {
+    background: $color-1;
+  }
+
+  &--light {
+    // background: #e3f2fd;
+    background: $color-1-light;
+  }
+
+  &--grey {
+    background: $color-grey-1;
+  }
+
+  &--light-green {
+    background: transparentize($color-2, 0.7);
+  }
+
+  &--0 {
+    padding: 0;
+  }
+
+  &--tight {
+    padding: 40px 0;
+  }
+
+  &--wide {
+    padding: 40px 0;
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 90px 0;
+    }
+  }
+
+  &--post-counters {
+    background: $color-1-light;
+    border-radius: $bradius-sm;
+    padding: $padding-card-sm;
+    margin: $padding-card-sm;
+
+    @media (min-width: $breakpoint-xl) {
+      padding: $padding-card-lg;
+      margin: $padding-card-lg;
+    }
+  }
+
+  // &--dark {
+  //     background: ;
+  // }
+
+  // &--hero-2 {
+  //   height: 100vh;
+  //   width: 100%;
+  //   padding: 0;
+
+  //   & .slider--hero {
+  //     height: 100vh;
+  //     border-radius: 0;
+  //   }
+  // }
+
+  // &--content {
+  //   #{$section}__container {
+  //     display: grid;
+  //     column-gap: $column-gap-md;
+  //     row-gap: 20px;
+  //     grid-template-columns: 1fr;
+
+  //     @media (min-width: $breakpoint-md) {
+  //       grid-template-columns: 50% 1fr;
+  //     }
+  //   }
+  //   // display: grid;
+  //   padding: $padding-bottom-lg 0;
+
+  //   #{$section}__content {
+  //     align-self: center;
+  //   }
+
+  //   #{$section}__img {
+  //     @media (min-width: $breakpoint-lg) {
+  //       height: 550px;
+  //     }
+  //   }
+
+  //   #{$section}__usps {
+  //     margin-top: 30px;
+
+  //     & .iconbox {
+  //       margin-bottom: 10px;
+  //     }
+  //   }
+  // }
+
+  // &--content-2 {
+  //   #{$section}__content {
+  //     align-self: inherit;
+  //     font-size: 20px;
+  //     position: relative;
+  //   }
+  //   #{$section}__img {
+  //     border-radius: $bradius-md;
+  //     box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.2);
+  //   }
+  // }
+
+  // &--cards {
+  //   padding: $padding-bottom-lg 0;
+
+  //   #{$section}__container {
+  //     grid-template-columns: 1fr 1fr 1fr;
+  //     column-gap: $column-gap-sm;
+  //   }
+  // }
+
+  // &--services {
+  //   padding: $padding-bottom-lg 0;
+
+  //   #{$section}__container {
+  //     grid-template-columns: 1fr 1fr;
+  //     gap: $column-gap-sm;
+  //   }
+
+  //   #{$section}__header {
+  //     text-align: center;
+  //     margin-bottom: $column-gap-sm;
+
+  //     @media (min-width: $breakpoint-sm) {
+  //       margin-bottom: $column-gap-md;
+  //     }
+  //   }
+
+  //   @media (min-width: $breakpoint-lg) {
+  //     #{$section}__container {
+  //       grid-template-columns: 1fr 1fr 1fr 1fr;
+  //       column-gap: $column-gap-sm;
+  //     }
+  //   }
+  // }
+
+  // &--services-2 {
+  //   width: 100%;
+  //   padding: 0;
+
+  //   #{$section}__header {
+  //     padding: 90px 0;
+  //     width: 100%;
+  //     margin-bottom: 0;
+  //   }
+  //   #{$section}__container {
+  //     display: grid;
+  //     gap: 0;
+  //     max-width: 100%;
+  //     width: 100%;
+  //   }
+
+  //   & .card {
+  //     border-radius: 0;
+  //     height: 300px;
+
+  //     @media (min-width: $breakpoint-md) {
+  //       height: 600px;
+  //     }
+
+  //     &__bg {
+  //       border-radius: 0;
+  //     }
+
+  //     &__title {
+  //       font-size: 1.5rem !important;
+  //     }
+  //   }
+  // }
+
+  &--mirror {
+    #{$section}__content {
+      order: 2;
+    }
+  }
+
+  //   &--intro {
+  //     padding-top: 30px;
+
+  //     #{$section}__container {
+  //       display: grid;
+  //       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  //     }
+  //   }
+  // }
+
+  // .services {
+  //   display: grid;
+  //   grid-template-columns: 1fr;
+  //   gap: $column-gap-sm;
+
+  //   @media (min-width: $breakpoint-sm) {
+  //     grid-template-columns: 1fr 1fr;
+  //   }
+
+  //   @media (min-width: $breakpoint-lg) {
+  //     grid-template-columns: 1fr 1fr 1fr;
+  //   }
+  // }
+  // .posts {
+  //   $posts: &;
+
+  //   &--1 {
+  //     display: grid;
+  //     grid-template-columns: 1fr;
+  //     gap: $column-gap-sm;
+
+  //     @media (min-width: $breakpoint-sm) {
+  //       grid-template-columns: 1fr 1fr;
+  //     }
+
+  //     @media (min-width: $breakpoint-lg) {
+  //       grid-template-columns: 1fr 1fr 1fr;
+  //     }
+  //   }
+  // }
+  // .section {
+  //   $section: &;
+  //   &--hero-gallery {
+  //     padding: 30px 0;
+
+  //     @media (min-width: $breakpoint-md) {
+  //       padding: 60px 0;
+  //     }
+  //     #{$section}__container {
+  //       display: grid;
+  //       gap: 10px $column-gap-md;
+
+  //       @media (min-width: $breakpoint-sm) {
+  //         grid-template-columns: 60% 1fr;
+  //       }
+  //       @media (min-width: $breakpoint-md) {
+  //         grid-template-columns: 40% 1fr;
+  //       }
+  //     }
+  //     #{$section}__content {
+  //       align-self: center;
+  //     }
+  //   }
+  // }
+
+  // .hero-gallery {
+  //   display: grid;
+  //   gap: $column-gap-sm;
+  //   grid-template-columns: 1fr;
+  //   //   justify-content: center;
+  //   //   align-self: center;
+
+  //   @media (min-width: $breakpoint-md) {
+  //     grid-template-columns: 1fr 1fr;
+  //   }
+  //   @media (min-width: $breakpoint-lg) {
+  //     grid-template-columns: 1fr 1fr 1fr;
+  //   }
+
+  //   &__col-1 {
+  //     align-self: center;
+  //   }
+
+  //   &__col-2 {
+  //     display: none;
+
+  //     @media (min-width: $breakpoint-md) {
+  //       align-self: center;
+
+  //       display: block;
+  //     }
+  //   }
+  //   &__col-3 {
+  //     display: none;
+
+  //     @media (min-width: $breakpoint-lg) {
+  //       align-self: center;
+  //       display: block;
+  //     }
+  //   }
+
+  //   &__img {
+  //     height: 220px;
+  //     object-fit: cover;
+  //     margin: 10px 0;
+  //     width: 100%;
+  //     @media (min-width: $breakpoint-md) {
+  //       height: 180px;
+  //     }
+  //   }
+  // }
+}
+.pt-lg {
+  padding-top: $padding-bottom-lg;
+}

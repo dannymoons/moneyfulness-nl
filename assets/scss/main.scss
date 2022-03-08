@@ -1,0 +1,28 @@
+// Vendor styling
+@import "swiper/scss";
+// @import "aos/dist/aos";
+@import "components/aos/animations";
+@import "components/aos/core";
+@import "components/aos/easing";
+
+// Global styling
+@import "components/variables";
+@import "components/basics";
+@import "components/mixins";
+@import "components/typography";
+@import "components/utility";
+@import "components/navbar";
+@import "components/grid";
+@import "components/animations";
+
+@import "components/sections";
+@import "components/spacing";
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/heroes";
+@import "components/single-post";
+
+@import "components/footer";
+
+@import "../../blocks/**/*.scss";

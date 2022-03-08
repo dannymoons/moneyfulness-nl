@@ -1,0 +1,31 @@
+.post-overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $column-gap-sm;
+
+  @media (min-width: $breakpoint-lg) {
+    gap: $column-gap-md;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__content {
+  }
+
+  &__posts {
+    display: grid;
+    gap: $column-gap-sm;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

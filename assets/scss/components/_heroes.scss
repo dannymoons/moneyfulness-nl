@@ -1,0 +1,10 @@
+.hero {
+  $hero: &;
+  position: relative;
+
+  &--mirror {
+    #{$hero}__content {
+      order: 2;
+    }
+  }
+}

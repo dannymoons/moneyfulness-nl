@@ -1,0 +1,51 @@
+// COLORS
+.bg {
+  &--primary {
+    background: $color-1;
+  }
+
+  &--secondary {
+    background: $color-1-dark;
+  }
+
+  &--grey {
+    background: $color-grey-1;
+  }
+
+  &--light {
+    background: $color-1-light;
+  }
+}
+
+// alignments
+.align-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+// SPACING
+.m-zero {
+  margin: 0;
+}
+// HIDE
+.hide-md {
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+.hide-lg {
+  display: none;
+  @media (min-width: $breakpoint-lg) {
+    display: block;
+  }
+}
+
+.hide-xl {
+  display: none;
+  @media (min-width: $breakpoint-xl) {
+    display: block;
+  }
+}

@@ -1,0 +1,57 @@
+.step {
+  $step: &;
+
+  &--vertical {
+    $number-size: 30px;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    position: relative;
+
+    #{$step}__number {
+      //   background: transparentize($color-1, 0.9);
+      background: $color-1;
+      border-radius: 100%;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      // font-size: $font-size-lg;
+      font-weight: 700;
+      height: $number-size;
+      width: $number-size;
+      z-index: 10;
+    }
+    #{$step}__body {
+      // min-height: 75px;
+      padding: 0 $padding-card-sm $padding-card-sm;
+    }
+    #{$step}__title {
+      color: $color-font-title;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      line-height: 1;
+      margin: 0;
+    }
+    #{$step}__text,
+    #{$step}__text p {
+      margin: 0;
+    }
+
+    &:before {
+      background: $color-2;
+      content: "";
+      position: absolute;
+      left: calc((#{$number-size} / 2) - 1.5px);
+      height: 100%;
+      width: 3px;
+    }
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

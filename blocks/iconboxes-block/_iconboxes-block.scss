@@ -1,0 +1,61 @@
+.iconbox {
+  $iconbox: &;
+  display: grid;
+
+  &--stacked {
+    $icon-size: 50px;
+    grid-template-columns: 50px 1fr;
+    gap: 0 20px;
+
+    #{$iconbox}__icon {
+      background-color: $color-2;
+      border-radius: $bradius-md;
+      color: #fff;
+      padding: 10px;
+      height: $icon-size;
+      width: $icon-size;
+    }
+
+    #{$iconbox}__title {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      line-height: 1;
+      margin: 0;
+    }
+    #{$iconbox}__text {
+      line-height: 1.4;
+      margin-top: 10px;
+    }
+    #{$iconbox}__link {
+      text-decoration: none;
+      color: $color-2;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    #{$iconbox}__link-icon {
+      $icon-size: 16px;
+      height: $icon-size;
+      width: $icon-size;
+      color: $color-2;
+      margin-left: calc($icon-size / 2);
+    }
+  }
+
+  &--simple {
+    $icon-size: 20px;
+    align-items: center;
+    grid-template-columns: 20px 1fr;
+    gap: 0 calc($icon-size / 2);
+
+    #{$iconbox}__icon {
+      color: $color-2;
+      height: $icon-size;
+      width: $icon-size;
+    }
+    #{$iconbox}__content {
+      color: $color-font-title;
+    }
+  }
+}

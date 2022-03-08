@@ -1,0 +1,104 @@
+.event-overview {
+  display: grid;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $column-gap-sm;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.event {
+  $event: &;
+  box-shadow: $shadow-sm;
+  border-radius: 10px;
+
+  &__content {
+    margin-bottom: calc($padding-card-sm * 2);
+    padding: $padding-card-sm;
+    position: relative;
+  }
+
+  &__data {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // column-gap: 20px;
+    // font-size: $font-size-sm;
+
+    // @media (min-width: $breakpoint-sm) {
+    //   grid-template-columns: 1fr;
+    //   column-gap: 0;
+    //   font-size: 1rem;
+    // }
+  }
+
+  &__icon-container {
+    background: $color-2;
+    border-radius: 10px 0 99px 0;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 9px;
+  }
+
+  &__icon {
+    color: #fff;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__title {
+    color: $color-font-title;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+  }
+
+  &__date {
+    display: block;
+    font-size: $font-size-sm;
+    margin-left: 45px;
+    margin-top: -10px;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      $icon-size: 16px;
+      margin-right: calc($icon-size / 2);
+      height: $icon-size;
+      width: $icon-size;
+    }
+  }
+
+  &__start {
+  }
+
+  &__end {
+  }
+
+  &__venue {
+  }
+
+  &__location {
+  }
+
+  &__tickets {
+    color: $color-1;
+    // font-weight: $font-weight-bold;
+    position: absolute;
+    right: $padding-card-sm;
+    bottom: $padding-card-sm;
+  }
+}

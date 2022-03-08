@@ -1,0 +1,44 @@
+.signup {
+  $signup: &;
+
+  &--newsletter {
+    max-width: calc($content-width / 1.5);
+    margin: auto;
+  }
+}
+
+.newsletter {
+  $this: &; // $this is een test
+
+  &--fancy {
+    // background: $color-2;
+    background-color: #fff;
+    border-radius: $bradius-md;
+    box-shadow: $shadow-lg;
+    padding: $padding-card-sm;
+    position: relative;
+    max-width: 750px;
+    margin: 60px auto;
+
+    @media (min-width: $breakpoint-md) {
+      padding: $padding-card-lg;
+    }
+
+    #{$this}__body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $column-gap-sm;
+
+      //   @media (min-width: $breakpoint-md) {
+      //     grid-template-columns: 1fr 1fr;
+      //   }
+
+      & p {
+        margin: 0;
+      }
+    }
+    #{$this}__content {
+      text-align: center;
+    }
+  }
+}

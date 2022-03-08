@@ -1,0 +1,30 @@
+@keyframes hero-icon-one {
+  0% {
+    transform: translateY(0) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(-10deg);
+  }
+}
+
+@keyframes hero-icon-two {
+  0% {
+    transform: translateY(0) rotate(10deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(5deg);
+  }
+}
+.image-container {
+  border-radius: $bradius-lg;
+  position: relative;
+  overflow: hidden;
+
+  &__overlay {
+    background: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+  }
+}

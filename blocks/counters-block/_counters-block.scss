@@ -1,0 +1,45 @@
+.counter {
+  $counter: &;
+  text-align: center;
+
+  &__icon {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
+
+    &--stacked {
+      border-radius: 99px;
+      padding: 10px;
+    }
+  }
+
+  &__number {
+    color: $color-1;
+    font-family: $font-heading;
+    font-size: $title-size-md;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+    margin: 0;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $title-size-lg;
+    }
+  }
+
+  &__label {
+    color: $color-font-title;
+    font-family: $font-heading;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &--icon-top {
+    #{$counter}__icon {
+      text-align: center;
+    }
+  }
+
+  &--icon-left {
+    text-align: left;
+  }
+}

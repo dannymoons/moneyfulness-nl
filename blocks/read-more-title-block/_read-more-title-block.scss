@@ -1,0 +1,53 @@
+.readmore {
+  $readmore: &;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+  }
+
+  &__bg {
+    @include bg-absolute;
+  }
+
+  &__overlay {
+    @include overlay-dark;
+  }
+
+  &__container {
+    // max-width: 800px;
+    // margin: auto;
+    // width: 90%;
+    position: relative;
+  }
+
+  &__icon {
+    color: $color-1;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+  }
+
+  &--boxed {
+    padding: 0;
+    border-radius: $bradius-md;
+    @include content-width;
+
+    @media (min-width: $breakpoint-md) {
+    }
+
+    #{$readmore}__container {
+      width: 100%;
+      padding: 20px;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 60px;
+      }
+
+      @media (min-width: $breakpoint-xl) {
+        padding: 90px;
+      }
+    }
+  }
+}

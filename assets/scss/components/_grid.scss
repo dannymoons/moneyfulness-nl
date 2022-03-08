@@ -1,0 +1,118 @@
+.grid {
+  $grid: &;
+  display: grid;
+  grid-template-columns: 1fr;
+  // gap: $column-gap-md;
+  align-items: start;
+
+  &__col-1,
+  &__col-2 {
+    // overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+
+    @media (min-width: $breakpoint-lg) {
+      max-height: 550px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      max-height: 650px;
+    }
+  }
+
+  &--boxed {
+    border-radius: $bradius-sm;
+    // box-shadow: $shadow-sm;
+    padding: $padding-card-sm;
+  }
+
+  &--mirror {
+    #{$grid}__col-1 {
+      @media (min-width: $breakpoint-md) {
+        order: 2;
+      }
+    }
+    #{$grid}__col-2 {
+      @media (min-width: $breakpoint-md) {
+        order: 1;
+      }
+    }
+  }
+
+  &--66 {
+    gap: $column-gap-sm;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-md) {
+      gap: $column-gap-md;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--services-carousel {
+    gap: $column-gap-sm;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-md) {
+      gap: $column-gap-md;
+      grid-template-columns: 33.3% 1fr;
+    }
+    #{$grid}__col-1 {
+      @media (min-width: $breakpoint-lg) {
+        align-self: center;
+      }
+    }
+    #{$grid}__col-2 {
+      padding: 5px;
+    }
+  }
+
+  &--cards-3,
+  &--444 {
+    align-items: start;
+    gap: $column-gap-sm;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--cards-4,
+  &--3333 {
+    gap: calc(#{$column-gap-sm} / 2);
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      gap: $column-gap-sm;
+    }
+  }
+  &--archive {
+    gap: calc(#{$column-gap-sm} / 2);
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $column-gap-sm;
+    }
+  }
+}

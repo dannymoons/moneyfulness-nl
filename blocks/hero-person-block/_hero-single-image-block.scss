@@ -1,0 +1,129 @@
+.hero {
+  $hero: &;
+
+  &--person {
+    background: transparentize($color-2, 0.7);
+    padding: 60px 0 0;
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 120px 0 0;
+    }
+    #{$hero}__container {
+      display: grid;
+      max-width: 1280px;
+      gap: $column-gap-md;
+      margin: auto;
+      position: relative;
+      width: 90%;
+
+      @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+        // gap: $column-gap-md;
+      }
+    }
+
+    #{$hero}__content {
+      align-self: center;
+    }
+    #{$hero}__image {
+      position: relative;
+    }
+    #{$hero}__img {
+      display: block;
+      // height: 700px;
+      object-fit: contain;
+      margin: auto;
+      height: 250px;
+
+      @media (min-width: $breakpoint-lg) {
+        height: 500px;
+      }
+    }
+    #{$hero}__blurb {
+      display: none;
+      place-items: center;
+      background: #fff;
+      border-radius: $bradius-md;
+      box-shadow: $shadow-sm;
+      padding: 10px;
+      position: absolute;
+
+      @media (min-width: $breakpoint-xl) {
+        display: grid;
+      }
+
+      &--1 {
+        // animation: hero-icon-one 3s ease-in-out alternate infinite;
+        // transform: rotate(-10deg);
+        top: 130px;
+        left: 150px;
+      }
+
+      &--2 {
+        // animation: hero-icon-two 4s ease-in-out alternate infinite;
+        // transform: rotate(10deg);
+        bottom: 100px;
+        right: 100px;
+      }
+
+      &--3 {
+        top: 60px;
+        right: 80px;
+      }
+    }
+
+    #{$hero}__blurbicon {
+      color: $color-1;
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  &--2 {
+    display: grid;
+    align-items: center;
+    padding: 60px 0;
+
+    @media (min-width: $breakpoint-md) {
+      height: 70vh;
+      padding: 0;
+    }
+    #{$hero}__bg {
+      @include bg-absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #{$hero}__overlay {
+      @include overlay-light;
+    }
+
+    #{$hero}__container {
+      margin: auto;
+      max-width: 1280px;
+      width: 90%;
+      z-index: 10;
+    }
+    #{$hero}__content {
+      color: #fff;
+      max-width: 650px;
+    }
+    #{$hero}__title {
+      color: #fff;
+    }
+    #{$hero}__text {
+      color: #fff;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: $font-size-lg;
+      }
+    }
+
+    #{$hero}__btns {
+      & .btn {
+        margin-right: 12px;
+      }
+    }
+  }
+}

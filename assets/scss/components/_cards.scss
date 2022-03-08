@@ -1,0 +1,241 @@
+$card-text-size: 0.9rem;
+
+.card {
+  $card: &;
+  font-family: $font-primary;
+  position: relative;
+  word-wrap: break-word;
+  background-color: #fff;
+  // border: 1px solid rgba(0, 0, 0, .05);
+  border-radius: $bradius-md;
+  box-shadow: $shadow-sm;
+  -webkit-box-shadow: $shadow-sm;
+  overflow: hidden;
+
+  &__header {
+    // background: $color-grey-1;
+    line-height: 1.4;
+    padding: $padding-card-sm $padding-card-sm 0;
+
+    @media (min-width: $breakpoint-xl) {
+      padding: $padding-card-lg $padding-card-lg 0;
+    }
+  }
+
+  &__body {
+    padding: $padding-card-sm;
+    font-weight: $font-weight-light;
+
+    @media (min-width: $breakpoint-xl) {
+      padding: $padding-card-lg;
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-size: $title-size-card;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+    text-decoration: none;
+  }
+
+  &__text {
+    margin-top: 0;
+    font-size: $card-text-size;
+
+    & p {
+      margin-top: 0;
+      font-size: $card-text-size;
+    }
+  }
+
+  &__img-container {
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__img {
+    border-radius: 0;
+    // border-radius: $bradius-sm $bradius-sm 0 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transition: $transition-1;
+
+    &:hover {
+      transform: $effect-zoom;
+    }
+  }
+
+  &__btn {
+    // box-shadow: none;
+    font-size: 0.65rem;
+    line-height: 1.5;
+    margin: 0.375rem 0;
+    padding: 0.75rem 1.75rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+      // box-shadow: none;
+    }
+  }
+  &--overlay {
+    border-radius: $bradius-md;
+    height: 300px;
+    position: relative;
+
+    #{$card}__img,
+    #{$card}__img-container {
+      @include bg-absolute;
+      border-radius: $bradius-sm;
+    }
+    #{$card}__overlay {
+      @include overlay-light;
+      border-radius: $bradius-sm;
+    }
+
+    #{$card}__body {
+      padding: $padding-card-sm;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    #{$card}__title {
+      color: #fff;
+      font-size: $font-size-sm;
+      line-height: 1;
+      margin-bottom: 0;
+      text-decoration: none;
+      width: 100%;
+
+      @media (min-width: $breakpoint-sm) {
+        font-size: 1rem;
+      }
+      @media (min-width: $breakpoint-lg) {
+        font-size: $font-size-lg;
+      }
+    }
+
+    #{$card}__text,
+    #{$card}__buttons {
+      display: none;
+    }
+
+    #{$card}__date {
+      color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: $padding-card-sm;
+      z-index: 1;
+    }
+  }
+
+  &--h {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    height: 100px;
+    // gap: 20px;
+
+    #{$card}__body {
+      align-self: center;
+      line-height: 1.4;
+      padding: 0 $padding-card-sm;
+    }
+
+    #{$card}__title {
+      font-size: $font-size-sm;
+      // line-height: 1.2;
+      margin: 0;
+    }
+
+    #{$card}__img-container {
+      height: auto;
+    }
+
+    #{$card}__img {
+      border-radius: $bradius-sm 0 0 $bradius-sm;
+    }
+
+    #{$card}__link {
+      color: $color-font-paragraph;
+      display: block;
+      font-size: $font-size-sm;
+      // line-height: 1;
+      margin-top: 10px;
+    }
+  }
+
+  &--signup {
+    display: grid;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #{$card}__img-container {
+      border-radius: $bradius-md $bradius-md 0 0;
+      height: auto;
+
+      @media (min-width: $breakpoint-md) {
+        border-radius: $bradius-md 0 0 $bradius-md;
+      }
+    }
+    #{$card}__img {
+      border-radius: 0;
+    }
+  }
+
+  &--duotone {
+    // border-radius: $bradius-md;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #{$card}__col-1 {
+      border-radius: $bradius-md $bradius-md 0 0;
+      background: $color-grey-1;
+      padding: $padding-card-sm;
+
+      @media (min-width: $breakpoint-md) {
+        border-radius: $bradius-md 0 0 $bradius-md;
+      }
+
+      @media (min-width: $breakpoint-md) {
+        padding: $padding-card-lg;
+      }
+    }
+    #{$card}__col-2 {
+      background: $color-1;
+      border-radius: 0 0 $bradius-md $bradius-md;
+      // padding: $padding-card-sm;
+
+      @media (min-width: $breakpoint-md) {
+        border-radius: 0 $bradius-md $bradius-md 0;
+      }
+
+      @media (min-width: $breakpoint-md) {
+        // padding: $padding-card-lg;
+      }
+    }
+
+    #{$card}__body {
+      padding: $padding-card-sm 0;
+    }
+
+    #{$card}__img-container {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & .iconbox {
+    margin: 5px 0;
+  }
+}

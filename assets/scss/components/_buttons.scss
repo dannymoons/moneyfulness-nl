@@ -1,0 +1,122 @@
+.btn {
+  $btn: &;
+  border-radius: $bradius-btn;
+  // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-primary;
+  // font-size: 1rem;
+  font-size: 1rem;
+  font-weight: $font-weight-medium;
+  line-height: 1.5;
+  margin: 0 8px 0 0;
+  // padding: 0.84rem 2.14rem;
+  padding: 12px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.4s ease;
+  // transform: translateY(0);
+  // text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &__icon {
+    margin-left: 8px;
+  }
+
+  &--sm {
+    font-size: 0.6rem;
+    padding: $button-sm-padding;
+  }
+
+  &--primary {
+    background: $color-1;
+    border: 1.5px solid $color-1;
+    color: #fff;
+
+    &::before {
+      background: #000;
+      content: "";
+      filter: blur(12px);
+      opacity: 0.4;
+      position: absolute;
+      inset: auto 10px -2px 10px;
+      width: calc(100% - 20px);
+      height: 20px;
+      transition: 0.4s ease;
+      z-index: -1;
+    }
+    &:hover {
+      background: $color-1-hover;
+      border-color: $color-1-hover;
+
+      // color: #fff;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+  }
+
+  &--secondary {
+    background: $color-2;
+    border: 1.5px solid $color-2;
+    color: #fff;
+    &:hover {
+      background: $color-2-hover;
+      border-color: $color-2-hover;
+      // color: #fff;
+    }
+  }
+
+  &--black {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+  }
+
+  &--grey {
+    background: $color-grey-1;
+    border: none;
+    color: $color-font;
+  }
+
+  &--white {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #000;
+
+    &:hover {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border: 1px solid $color-1;
+    color: $color-1;
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &--text {
+    align-items: center;
+    display: flex;
+    padding: 0;
+
+    #{$btn}__icon {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+$star-color: #ffa900;
+$testi-1-img-size: 80px;
+$testi-2-img-size: 60px;
+
+.testi {
+  $testi: &;
+
+  &--1 {
+    text-align: center;
+    position: relative;
+    #{$testi}__container {
+      background-color: $color-grey-1;
+      border-radius: $bradius-sm;
+      padding: 20px;
+      position: relative;
+
+      &:before {
+        background: $color-grey-1;
+        content: "";
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: calc(50% - 10px);
+        bottom: -10px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    #{$testi}__text {
+    }
+    #{$testi}__author {
+      color: #222;
+      font-weight: $font-weight-bold;
+      margin: 10px 0 0;
+    }
+    #{$testi}__company {
+    }
+    #{$testi}__function {
+    }
+    #{$testi}__img {
+      border-radius: 100%;
+      object-fit: cover;
+      margin: 30px auto 0;
+      height: $testi-1-img-size;
+      width: $testi-1-img-size;
+    }
+    #{$testi}__stars {
+    }
+    #{$testi}__star {
+      color: $star-color;
+    }
+  }
+  &--2 {
+    background-color: #fff;
+    position: relative;
+
+    #{$testi}__container {
+      border-radius: $bradius-sm;
+      box-shadow: $shadow-sm;
+      padding: 20px;
+      position: relative;
+    }
+
+    #{$testi}__header {
+      display: grid;
+      gap: 20px;
+      // grid-template-columns: 60px 1fr 100px; stars needed
+      grid-template-columns: 60px 1fr;
+    }
+
+    #{$testi}__text {
+    }
+    #{$testi}__author {
+      color: #222;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-lg;
+      margin: 0;
+    }
+    #{$testi}__company {
+      margin: 0;
+    }
+    #{$testi}__function {
+    }
+    #{$testi}__img {
+      border-radius: 100%;
+      object-fit: cover;
+      height: $testi-2-img-size;
+      width: $testi-2-img-size;
+    }
+    #{$testi}__stars {
+      text-align: right;
+    }
+    #{$testi}__star {
+      color: $star-color;
+    }
+  }
+
+  &--3 {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    #{$testi}__title {
+      color: #222;
+      font-weight: $font-weight-bold;
+      font-size: $title-size-card;
+      margin: 0;
+    }
+
+    #{$testi}__text {
+      margin-top: 0;
+    }
+
+    #{$testi}__author {
+      color: #222;
+      font-weight: $font-weight-bold;
+    }
+    #{$testi}__img {
+      border-radius: 99px;
+      height: $testi-1-img-size;
+      width: $testi-1-img-size;
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+}

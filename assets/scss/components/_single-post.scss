@@ -1,0 +1,142 @@
+.single-post {
+  $post: &;
+
+  & h1 {
+  }
+
+  & h2 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+  }
+
+  &--simple {
+    background: $color-grey-1;
+    padding: 20px 0;
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 60px 0;
+    }
+
+    #{$post}__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: flex-start;
+      @include content-width;
+
+      @media (min-width: $breakpoint-lg) {
+        gap: $column-gap-md;
+        grid-template-columns: 1fr 350px;
+      }
+    }
+
+    #{$post}__featured {
+      border-radius: $bradius-sm $bradius-sm 0 0;
+      display: block;
+      height: 40vh;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    #{$post}__content {
+      background: #fff;
+      border-radius: $bradius-sm;
+      box-shadow: $shadow-sm;
+    }
+
+    #{$post}__header {
+      padding: $padding-card-sm;
+
+      @media (min-width: $breakpoint-lg) {
+        padding: $padding-card-lg $padding-card-lg 0;
+      }
+    }
+
+    #{$post}__body {
+      padding: $padding-card-sm;
+
+      @media (min-width: $breakpoint-lg) {
+        padding: $padding-card-sm $padding-card-lg $padding-card-lg
+          $padding-card-lg;
+      }
+    }
+
+    #{$post}__title {
+      font-size: 1.5rem;
+
+      @media (min-width: $breakpoint-lg) {
+        font-size: 2.5rem;
+      }
+    }
+
+    #{$post}__meta {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    #{$post}__meta-item {
+      background: #fff;
+      border-radius: $bradius-sm;
+      color: $color-font-paragraph;
+      font-size: $font-size-xs;
+      margin-right: 12px;
+      padding: 4px 8px;
+      text-decoration: none;
+    }
+
+    #{$post}__sidebar {
+      height: 100%;
+      position: relative;
+    }
+  }
+}
+
+.recent-posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $column-gap-sm;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+  }
+
+  &__btn {
+    text-align: right;
+  }
+}
+
+.sidebar {
+  &__widget {
+    margin: $column-gap-md 0 0;
+
+    @media (min-width: $breakpoint-lg) {
+      margin: 0 0 $column-gap-md;
+    }
+
+    &--contact {
+      background: #fff;
+      box-shadow: $shadow-sm;
+      border: 1px solid #fff;
+      border-radius: $bradius-sm;
+      padding: 20px;
+      margin-bottom: $column-gap-md;
+
+      @media (min-width: $breakpoint-lg) {
+        position: sticky;
+        top: 120px;
+        z-index: 5;
+      }
+    }
+  }
+
+  &__title {
+    color: #000;
+    margin-top: 0;
+    font-family: $font-heading;
+    font-size: $font-size-lg;
+  }
+}

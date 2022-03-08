@@ -1,0 +1,7 @@
+.popup {
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: 200px !important;
+  width: 100% !important;
+}

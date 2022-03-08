@@ -1,0 +1,114 @@
+// Fonts
+$font-primary: "poppins";
+$font-heading: "poppins";
+
+// Font - Sizes
+$font-size-xs: 0.8rem;
+$font-size-sm: 0.9rem;
+$font-size-lg: 1.2rem;
+$title-size-xl: 80px;
+$title-size-lg: 50px;
+$title-size-md: 34px;
+$title-size-sm: 24px;
+$title-size-xs: 16px;
+$title-size-card: 1.5rem;
+// Font - Weight
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+$font-weight-heavy: 900;
+
+// Colors
+$color-1: #ff9b00;
+$color-1-dark: darken($color-1, 5%);
+$color-1-hover: lighten($color-1, 15%);
+$color-1-light: lighten($color-1, 43%);
+$color-2: #9ccc65;
+$color-2-dark: darken($color-2, 30%);
+// $color-2-light: lighten($color-2, 47%);
+$color-2-light: rgba(156, 204, 101, 0.3);
+$color-2-hover: lighten($color-2, 15%);
+// $color-2-bg-light: transparentize($color-2, 0.7);
+// $color-3: ;
+// $color-4: ;
+// $color-5: ;
+// $color-6: ;
+$color-grey-1: #f1f4f7;
+$color-grey-2: #e9ecef;
+$color-dark-1: #141416;
+$color-font: #141416;
+$color-font-title: #141416;
+$color-font-paragraph: transparentize($color-font, 0.3);
+$color-font-light: transparentize($color-font, 0.6);
+
+// Layout
+// Layout - Breakpoinsts
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Layout - Content Sizes
+$content-width-xs: 800px;
+$content-width-sm: 1080px;
+$content-width: 1280px;
+
+// Layout - Grid
+$column-gap-sm: 25px;
+$column-gap-md: 100px;
+
+// Layout - Spacing
+$padding-card-sm: 1.25rem;
+$padding-card-lg: 40px;
+$section-padding-0: 0 0;
+$section-padding-sm: 30px;
+$section-padding-md: 60px;
+$section-padding-lg: 120px;
+$section-padding-xl: 150px;
+$margin-sm: 30px;
+$margin-md: 60px;
+$margin-lg: 90px;
+$padding-top-sm: 30px;
+$padding-top-md: 60px;
+$padding-top-lg: 90px;
+$padding-bottom-sm: 30px;
+$padding-bottom-md: 60px;
+$padding-bottom-lg: 90px;
+$gutters-sm: 12.5px;
+$gutters-md: 25px;
+
+// Styling
+// Styling - Borders
+$border-outer: 2px;
+$border-inner: 1px;
+
+// Styling - Buttons
+$button-sm-padding: 0.75rem 1.4rem;
+
+// Styling - Shadows
+$shadow-0: none;
+$shadow-sm: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+$shadow-md: 0px 5px 20px 0px rgba(0, 0, 0, 0.16);
+$shadow-lg: 0px 0px 40px 0px rgba(0, 0, 0, 0.16);
+
+// Styling - Radius
+$bradius-sm: 6px;
+$bradius-md: 12px;
+$bradius-lg: 30px;
+$cradius-sm: 6px;
+$cradius-md: 12px;
+$cradius-lg: 30px;
+$bradius-btn: $bradius-sm;
+
+// Styling - Transitions
+$transition-1: 0.4s ease;
+// $transition-2: ;
+
+// Styling - FX
+$effect-zoom: scale(1.1);
+
+// Logo
+$logo-sm: 60px;
+$logo-md: 100px;
+$logo-lg: 130px;

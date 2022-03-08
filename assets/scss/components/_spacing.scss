@@ -1,0 +1,161 @@
+.p-sm {
+  padding: $padding-top-sm;
+}
+.p-md {
+  padding: $padding-top-md;
+}
+.p-lg {
+  padding: $padding-top-lg;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: $padding-top-md;
+  }
+}
+.pt-sm {
+  padding-top: $padding-top-sm;
+}
+.pt-md {
+  padding-top: $padding-top-md;
+}
+.pt-lg {
+  padding-top: $padding-top-lg;
+}
+
+@media (max-width: $breakpoint-md) {
+  .pt-md {
+    padding-top: $padding-top-sm;
+  }
+  .pt-lg {
+    padding-top: $padding-top-md;
+  }
+}
+
+.pb-sm {
+  padding-bottom: $padding-bottom-sm;
+}
+.pb-md {
+  padding-bottom: $padding-bottom-md;
+}
+.pb-lg {
+  padding-bottom: $padding-bottom-lg;
+}
+
+@media (max-width: $breakpoint-md) {
+  .pb-md {
+    padding-bottom: $padding-bottom-sm;
+  }
+  .pb-lg {
+    padding-bottom: $padding-bottom-md;
+  }
+}
+
+.py-sm {
+  padding-top: $padding-top-sm;
+  padding-bottom: $padding-bottom-sm;
+}
+.py-md {
+  padding-top: $padding-top-md;
+  padding-bottom: $padding-bottom-md;
+}
+.py-lg {
+  padding-top: $padding-top-lg;
+  padding-bottom: $padding-bottom-lg;
+}
+
+@media (max-width: $breakpoint-md) {
+  .py-md {
+    padding-top: $padding-top-sm;
+    padding-bottom: $padding-bottom-sm;
+  }
+  .py-lg {
+    padding-top: $padding-top-md;
+    padding-bottom: $padding-bottom-md;
+  }
+}
+.pt-0 {
+  padding-top: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+// margin
+
+.my-lg {
+  margin: $margin-lg 0;
+  @media (max-width: $breakpoint-md) {
+    margin: $margin-md 0;
+  }
+}
+
+.my-md {
+  margin: $margin-md 0;
+  @media (max-width: $breakpoint-md) {
+    margin: $margin-sm 0;
+  }
+}
+
+.my-sm {
+  margin: $margin-sm 0;
+}
+
+.mt-lg {
+  margin-top: $margin-lg;
+  @media (max-width: $breakpoint-md) {
+    margin-top: $margin-md;
+  }
+}
+
+.mt-md {
+  margin-top: $margin-md;
+  @media (max-width: $breakpoint-md) {
+    margin: $margin-sm;
+  }
+}
+
+.mt-sm {
+  margin-top: $margin-sm;
+}
+
+.mb-lg {
+  margin-bottom: $margin-lg;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: $margin-md;
+  }
+}
+
+.mb-md {
+  margin-bottom: $margin-md;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: $margin-sm;
+  }
+}
+
+.mb-sm {
+  margin-bottom: $margin-sm;
+}
+// Offset
+@media (min-width: 767px) {
+  .off-left-sm {
+    padding-left: 2rem;
+  }
+
+  .off-left-md {
+    padding-left: 8.333333%;
+  }
+
+  .off-left-lg {
+    padding-left: 15%;
+  }
+
+  .off-right-sm {
+    padding-right: 2rem;
+  }
+
+  .off-right-md {
+    padding-right: 8.333333%;
+  }
+
+  .off-right-lg {
+    padding-right: 15%;
+  }
+}

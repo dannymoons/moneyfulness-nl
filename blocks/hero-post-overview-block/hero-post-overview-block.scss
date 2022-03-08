@@ -1,0 +1,55 @@
+.hero {
+  $hero: &;
+  &--post-overview {
+    display: grid;
+    align-items: center;
+    padding: 30px;
+    height: auto;
+
+    #{$hero}__bg {
+      @include bg-absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #{$hero}__overlay {
+      @include overlay-dark;
+    }
+
+    #{$hero}__container {
+      margin: auto;
+      max-width: $content-width-xs;
+      width: 90%;
+      z-index: 10;
+    }
+    #{$hero}__content {
+      color: #fff;
+    }
+    #{$hero}__title {
+      color: #fff;
+    }
+    #{$hero}__text {
+      color: #fff;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: $font-size-lg;
+      }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 90px;
+    }
+
+    #{$hero}__content {
+      margin: auto;
+    }
+
+    & .moonsio-search {
+      margin: auto;
+      &__icon {
+        color: #000;
+      }
+    }
+  }
+}

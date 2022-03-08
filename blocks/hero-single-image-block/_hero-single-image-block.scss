@@ -1,0 +1,51 @@
+.hero {
+  $hero: &;
+
+  &--2 {
+    display: grid;
+    align-items: center;
+    padding: 60px 0;
+
+    @media (min-width: $breakpoint-md) {
+      height: 70vh;
+      padding: 0;
+    }
+    // #{$hero}__bg {
+    //   @include bg-absolute;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-attachment: fixed;
+    // }
+    #{$hero}__overlay {
+      @include overlay-light;
+    }
+
+    #{$hero}__container {
+      margin: auto;
+      max-width: 1280px;
+      width: 90%;
+      z-index: 10;
+    }
+    #{$hero}__content {
+      color: #fff;
+      max-width: 650px;
+    }
+    #{$hero}__title {
+      color: #fff;
+    }
+    #{$hero}__text {
+      color: #fff;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: $font-size-lg;
+      }
+    }
+
+    #{$hero}__btns {
+      & .btn {
+        margin-right: 12px;
+      }
+    }
+  }
+}

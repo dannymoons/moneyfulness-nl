@@ -1,0 +1,22 @@
+svg {
+  display: inline-block;
+}
+
+.section {
+  &__container {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+html :where(.wp-block) {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+.card {
+  border: inherit;
+}
+
+.image-container__overlay {
+  display: none;
+}

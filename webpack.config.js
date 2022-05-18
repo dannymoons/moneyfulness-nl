@@ -23,6 +23,7 @@ export default (env) => {
   const entry = {
     script: resolvePath(__dirname, "assets/js/main.js"),
     style: resolvePath(__dirname, "assets/scss/main.scss"),
+    admin: resolvePath(__dirname, "assets/scss/admin.scss"),
   };
 
   // ----------------------------

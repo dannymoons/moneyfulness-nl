@@ -1,0 +1,11 @@
+// .moonsio-icon-selector {
+//   background-color: red;
+
+//   & .select2-results__options {
+//     display: flex;
+//   }
+// }
+
+#select2-acf-bd_tool_svg_icon_field-results {
+  display: flex !important;
+}
